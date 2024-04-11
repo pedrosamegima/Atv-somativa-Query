@@ -52,8 +52,8 @@ public class AlunoController {
 		return ResponseEntity.ok(alunos);
 	}
 	@GetMapping("/renda/{renda}")
-	public ResponseEntity<List<Aluno>> getAlunosPorCidadeERenda(@PathVariable String cidade, double renda){
-		List<Aluno> alunos = alunoService.getAlunosPorCidadeERenda(cidade, renda);
+	public ResponseEntity<List<Aluno>> getAlunosPorRenda(@PathVariable double renda){
+		List<Aluno> alunos = alunoService.getAlunosPorRenda(renda);
 		return ResponseEntity.ok(alunos);
 	}
 	@GetMapping("/ra/{ra}")
